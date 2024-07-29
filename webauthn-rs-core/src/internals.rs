@@ -421,7 +421,7 @@ pub struct AttestationObject<T: Ceremony> {
     /// <https://w3c.github.io/webauthn/#generating-an-attestation-object>
     pub(crate) att_stmt: serde_cbor_2::Value,
     /// auth_data.
-    pub(crate) auth_data: AuthenticatorData<T>,
+    pub auth_data: AuthenticatorData<T>,
     /// auth_data_bytes.
     pub(crate) auth_data_bytes: Vec<u8>,
     /// ep_att

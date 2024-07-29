@@ -43,16 +43,16 @@ pub enum Mediation {
     // /// No mediation is provided - This is represented by "None" on the Option
     // below. We can't use None here as a variant because it confuses serde-wasm-bindgen :(
     // None,
-    // /// Silent, try to do things without the user being involved. Probably a bad idea.
-    // Silent,
-    // /// If we can get creds without the user having to do anything, great, other wise ask the user. Probably a bad idea.
-    // Optional,
+    /// Silent, try to do things without the user being involved. Probably a bad idea.
+    Silent,
+    /// If we can get creds without the user having to do anything, great, other wise ask the user. Probably a bad idea.
+    Optional,
     /// Discovered credentials are presented to the user in a dialog.
     /// Conditional UI is used. See <https://github.com/w3c/webauthn/wiki/Explainer:-WebAuthn-Conditional-UI>
     /// <https://w3c.github.io/webappsec-credential-management/#enumdef-credentialmediationrequirement>
     Conditional,
-    // /// The user needs to do something.
-    // Required
+    /// The user needs to do something.
+    Required,
 }
 
 /// A JSON serializable challenge which is issued to the user's webbrowser

@@ -351,10 +351,10 @@ pub struct CollectedClientData {
     pub origin: url::Url,
     /// The inverse of the sameOriginWithAncestors argument value that was
     /// passed into the internal method.
-    #[serde(rename = "crossOrigin", skip_serializing_if = "Option::is_none")]
+    #[serde(rename = "crossOrigin")]
     pub cross_origin: Option<bool>,
     /// tokenBinding.
-    #[serde(rename = "tokenBinding")]
+    #[serde(rename = "tokenBinding", skip_serializing_if = "Option::is_none")]
     pub token_binding: Option<TokenBinding>,
     /// This struct be extended, so it's important to be tolerant of unknown
     /// keys.

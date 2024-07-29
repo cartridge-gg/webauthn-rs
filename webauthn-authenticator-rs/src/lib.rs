@@ -123,7 +123,7 @@ pub mod prelude {
     };
 }
 
-mod authenticator_hashed;
+pub mod authenticator_hashed;
 #[cfg(any(all(doc, not(doctest)), feature = "crypto"))]
 mod crypto;
 
